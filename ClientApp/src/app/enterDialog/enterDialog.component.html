@@ -1,0 +1,21 @@
+<dialog class="dialogWindow">
+    <button class="closeButton" (click)="onClose(false)"><i class="pi pi-times" style="font-size: 1.5rem; color: aliceblue;"></i></button>
+    <h1 *ngIf="!registration">Вход</h1>
+    <h1 *ngIf="registration">Регистрация</h1>
+    <div style="height: 14rem;">
+        <input type="text" pInputText [(ngModel)]="login" placeholder="Логин" style="margin-top: 0;"/>
+        <input type="password" pInputText [(ngModel)]="password" placeholder="Пароль"/>
+        <div class="repeatPassword">
+            <input type="password" pInputText [(ngModel)]="repeatPassword" placeholder="Повторение пароля" *ngIf="registration"/>
+        </div>
+    </div>
+    <footer>
+        <div class="registrationOption">
+            <span (click)="setRegistration()" *ngIf="!registration">У меня нет аккаунта</span>
+            <span (click)="setRegistration()" *ngIf="registration">У меня есть аккаунт</span>
+            <button class="greenButton" (click)="onClose(true)">
+                Войти
+            </button>
+        </div>
+    </footer>
+</dialog>

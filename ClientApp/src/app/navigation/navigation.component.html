@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <td class="logo"><img src="../../assets/VeryBadLogo.png" (click)="changeTab(1)"></td>
+        <td style="width: 65%;"></td>
+        <!-- <td style="border-radius: 2.5rem 0rem 0rem 2.5rem;"><button (click)="changeTab(1)">Главная</button></td> -->
+        <td ><button (click)="changeTab(2)">Стримеры</button></td>
+        <td *ngIf="isEntered"><button (click)="changeTab(2)">Мои голоса</button></td>
+        <td>
+            <button class="greenButton" (click)="changeTab(3)" *ngIf="!isEntered">
+                Войти
+            </button>
+            <button (click)="changeTab(4)" *ngIf="isEntered">Профиль</button>
+        </td>
+    </tr>
+</table>
+
+
+

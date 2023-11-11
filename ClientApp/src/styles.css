@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(/assets/BackSpace.jpg) repeat top center;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  top: 20rem;
+  left: 5rem;
+  height: 0.1rem;
+  width: 0.1rem;
+  background-color: aliceblue;
+  border-radius: 1rem;
+  z-index: 1;
+  animation-duration: 10s;
+  animation-name: scaling;
+  animation-iteration-count: infinite;
+}
+
+.star2 {
+  animation-delay: 2s;
+}
+
+.star3 {
+  animation-delay: 3s;
+}
+
+.star4 {
+  animation-delay: 4s;
+}
+
+@keyframes scaling {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  height: 0.1rem;
+  width: 0.1rem;
+  background-color: rgb(250, 164, 124);
+  border-radius: 1rem;
+  z-index: 1;
+  animation-duration: 10s;
+  animation-name: meteorMove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes meteorMove {
+  from {
+    top: 0%;
+    left: 65%;
+    opacity: 1;
+  }
+
+  to {
+    top: 30%;
+    left: 99.9%;
+    opacity: 0;
+  }
+
+  25% {
+    top: 30%;
+    left: 99.9%;
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 1;
+  }
+}
+
+.satellite {
+  position: absolute;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: rgb(25, 79, 255);
+  border-radius: 1rem;
+  z-index: 1;
+  animation-duration: 60s;
+  animation-name: satelliteMove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes satelliteMove {
+  from {
+    top: 80%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  to {
+    top: 0%;
+    left: 80%;
+    opacity: 0;
+  }
+
+  25% {
+    top: 0%;
+    left: 80%;
+    opacity: 0;
+  }
+
+  3% {
+    opacity: 1;
+  }
+
+  6% {
+    opacity: 0.2;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.2;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 0.2;
+  }
+
+  21% {
+    opacity: 1;
+  }
+}

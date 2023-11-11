@@ -1,0 +1,59 @@
+
+<table>
+    <tr>
+        <td style="padding: 0;"><label style="margin: 5rem; font-size: 3rem;">Ник</label></td>
+        <td style="padding: 0;"><button class="editButton" (click)="edit()"><img src="../../assets/edit-text.png"></button></td>
+    </tr>
+    <tr>
+        <td style="width: 40%; text-align: center;" rowspan="4"><img src="../../assets/Photo.png"></td>
+        <td style="width: 60%;" *ngIf="isEditing"><input type="text"placeholder="Логин" /></td>
+        <td style="width: 60%;" *ngIf="!isEditing">Имя:</td>
+    </tr>
+    <ng-container *ngIf="isEditing">
+        <tr>
+            <td>
+                <input type="text"placeholder="Логин" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text"placeholder="Логин" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text"placeholder="Логин" />
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 4rem;">
+                
+            </td>
+        </tr>
+    </ng-container>
+    <ng-container *ngIf="!isEditing">
+        <tr>
+            <td>
+                Twitch:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YouTube:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Steam:
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 4rem;">
+                
+            </td>
+        </tr>
+    </ng-container>
+</table>
+
+
+

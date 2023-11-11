@@ -1,0 +1,11 @@
+<div>
+  <app-navigation (outputIndex)="setIndex($event)" [isEntered]="isEntered"></app-navigation>
+
+  <ng-container *ngIf="tabIndex == 3">
+      <app-enterDialog (visible)="closeEnterDialog($event)" (isEntered)="entering($event)"></app-enterDialog>
+  </ng-container>
+  
+  <ng-container *ngIf="tabIndex == 4">
+      <app-profilePage></app-profilePage>
+  </ng-container>
+</div>
